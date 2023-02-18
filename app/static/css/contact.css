@@ -1,0 +1,16 @@
+.form-group{
+    padding:10px;
+}
+
+button{
+    background-color: blue;
+    color:white;
+    padding:10px;
+    border-style:none;
+    width:10%;
+}
+
+.flashes{
+    color:red;
+    font-style: italic;
+}

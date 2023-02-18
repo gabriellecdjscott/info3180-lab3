@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+ {% block main %}
+ <head>
+      <link rel="stylesheet" href="static/css/contact.css" type="text/css" />
+ </head>
+
+
+     <h2>Contact Form</h2>
+     <hr>
+
+     <p>Fill in this form to contact the site owners.</p>
+
+     <form method="post" action="{{ url_for('contact') }}">
+         {{ form.csrf_token }}
+
+         <div class="form-group">
+             {{ form.name.label }} {{ form.name(class="form-control") }}
+         </div>
+
+         <div class="form-group">
+             {{ form.email.label }} {{ form.email(class="form-control", placeholder="jdoe@example.com") }}
+         </div>
+
+         <div class="form-group">
+             {{ form.subject.label }} {{ form.subject(class="form-control") }}
+         </div>
+
+         <div class="form-group">
+             {{ form.msg.label }} {{ form.msg(class="form-control") }}
+         </div>
+
+         <button>Send</button>
+     </form>
+
+ {% endblock %}
